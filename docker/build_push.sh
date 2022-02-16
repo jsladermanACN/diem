@@ -45,7 +45,8 @@ while getopts "pb:n:o:u" arg; do
   esac
 done
 
-GIT_REV=$(git rev-parse --short=8 HEAD)
+# GIT_REV=$(git rev-parse --short=8 HEAD)
+GIT_REV="5385255c"
 
 [ "$BRANCH" != "" ] || { echo "-b branch must be set"; usage; exit 99; }
 [ "$GIT_REV" != "" ] || { echo "Could not determine git revision, aborting"; usage; exit 99; }
